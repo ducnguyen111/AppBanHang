@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChiTietDonHangActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_ct"
+        android:background="#FF9800"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Chi tiết sản phẩm"
+        app:titleTextColor="@color/white" />
+    <ImageView
+        android:id="@+id/ct_hinhanh"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/toolbar_ct"
+        android:src="@drawable/new11" />
+
+    <RelativeLayout
+        android:layout_below="@id/ct_hinhanh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/ct_gia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:textSize="20dp" />
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/ct_gia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/ct_ten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/app_name"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+                <Spinner
+                    android:id="@+id/ct_sl"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/ct_ten"
+                    android:layout_margin="5dp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/ct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ct_sl"
+                    android:layout_margin="5dp"
+                    android:text="Mô tả sản phảm chi tiết"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+                <ScrollView
+                    android:layout_below="@+id/ct"
+                    android:id="@+id/srocl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/ct_mota"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_margin="5dp"
+                        android:text="@string/app_name"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+                </ScrollView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/backgroud"
+                    android:id="@+id/ct_giohang"
+                    android:textColor="@color/white"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/ct"
+                    android:text="Thêm giỏ hàng" />
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </ScrollView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

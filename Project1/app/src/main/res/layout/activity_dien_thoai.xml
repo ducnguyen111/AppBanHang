@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DienThoaiActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_dienthoai"
+        app:title="Smart Phone"
+        android:layout_width="match_parent"
+        android:background="#FFC107"
+        app:titleTextColor="@color/white"
+        android:layout_height="?attr/actionBarSize"/>
+    <ListView
+        android:background="#F1EEEE"
+        android:layout_margin="5dp"
+        android:id="@+id/list_dienthoai"
+        android:layout_below="@+id/toolbar_dienthoai"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
